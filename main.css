@@ -8,7 +8,7 @@
 .background{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, #85FFBD,#FFFB7D);
+    background: linear-gradient(160deg, #0093E9,#8469EF,#6E23DB);
     padding: 10px;
 }
 .whitebox{
@@ -21,10 +21,50 @@
 }
 .whitebox h1{
     display: flex;
+    margin-left: 90px;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
+
 .whitebox h1 img{
-    width: 55px;
-    margin-left: 20px;
+    width: 150px;
+    margin-left: 2px;
+}
+
+.whitebox hr{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 2px;
+    margin-top: none;
+    margin-bottom:30px ;
+    border-color: black;
+    background-color: black;
+}
+.row{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 15px;
+    font-display: #fff;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #8469EF;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
 }
