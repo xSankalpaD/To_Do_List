@@ -68,3 +68,19 @@ button{
     font-size: 16px;
     border-radius: 50px;
 }
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+        
+}
