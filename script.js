@@ -4,7 +4,7 @@ const taskList= document.getElementById("list");
 function addTask(){
     const taskText= taskInput.value;
     
-    if  (taskText.value== ''){
+    if (taskText.value== ''){
         alert("Please enter a Task!");
     }
     else{
