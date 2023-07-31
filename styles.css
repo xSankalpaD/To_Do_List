@@ -63,7 +63,7 @@ input{
     margin-left: 185px;
     margin-right: 125px;
 }
-button{
+#task-btn{
     border: none;
     outline: none;
     padding: 16px 50px 16px;
@@ -101,4 +101,17 @@ ul li.checked{
 ul li.checked::before{
     background-image: url(pcheck.png);
 }
+button.delete-btn{
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    
+    width: 30px;
+    align-items: end;
 
+}
+button.delete-btn img {
+    width: 30px; /* Set the image width as desired */
+    align-items: center;
+}
