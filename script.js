@@ -30,9 +30,24 @@ function createTaskItem(taskText) {
     deleteButton.appendChild(deleteImage); // Append the image to the button
     deleteButton.addEventListener("click", function (){
         taskItem.remove();
+   
     }); 
+    
+    // Add "Edit" button to each task
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit-btn"); //Add the custom CSS class to the button to edit it
+    editButton.textContent = "Edit";
+
+    editButton.addEventListener("click", function () {
+        const updatedText = prompt("Edit the task:", taskItem.textContent);
+        if (updatedText !== null && updatedText.trim() !== "") {
+            taskItem.textContent = updatedText.trim();
+        }
+    });
+
 
     taskItem.appendChild(deleteButton);
+    taskItem.appendChild(editButton);
 
     return taskItem;
 }
