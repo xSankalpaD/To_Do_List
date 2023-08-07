@@ -93,25 +93,32 @@ ul li::before{
     background-position: center;
     top: 12px;
     left:8px;
+    border-style: dashed;
+    border-width: 1px; 
 }
+
 ul li.checked{
     color: #555;
     text-decoration: line-through;
 }
+
 ul li.checked::before{
     background-image: url(pcheck.png);
 }
+
 button.delete-btn{
     background-color: red;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    
     width: 30px;
     align-items: end;
-
+    margin-left: 20px;
+    position: absolute;  /* moves it to very right #important*/
+    right: 5px;;
 }
+
 button.delete-btn img {
     width: 30px; /* Set the image width as desired */
-    align-items: center;
+    align-items: flex-start;  
 }

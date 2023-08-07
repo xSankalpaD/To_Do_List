@@ -3,10 +3,10 @@ const taskList= document.getElementById("list");
 
 function addTask(){
     const taskText= taskInput.value;
-    
-    if (taskText.value== ''){
+    if (taskInput.value== ''){
         alert("Please enter a Task!");
-    }
+       
+    }    
     else{
         const newTask = createTaskItem(taskText);
         taskList.appendChild(newTask);
@@ -18,6 +18,8 @@ function createTaskItem(taskText) {
 
     const taskItem= document.createElement("li");
     taskItem.textContent = taskText;
+
+    
         
     // Adding delete button
     const deleteButton = document.createElement("button");
@@ -38,3 +40,11 @@ function createTaskItem(taskText) {
 }
 
 }
+
+taskList.addEventListener("click", function(e){
+
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+    }
+
+});
