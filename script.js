@@ -14,7 +14,8 @@ function addTask(){
         taskInput.value = "";       
        
     }
-
+    
+}
 function createTaskItem(taskText) {
 
     const taskItem= document.createElement("li");
@@ -25,15 +26,16 @@ function createTaskItem(taskText) {
 
     taskItem.appendChild(deleteButton);
     taskItem.appendChild(editButton);
-
+    
     return taskItem;
 }
-}
+
 
 taskList.addEventListener("click", function(e){
 
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        
     }
 
 });
@@ -72,7 +74,6 @@ function createEditButton() {
 
     return editButton;
 }
-
 
 
 

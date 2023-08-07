@@ -67,9 +67,10 @@ input{
     border: none;
     outline: none;
     padding: 16px 50px 16px;
-    background: #8469EF;
+    background: #7760d4;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     border-radius: 50px;
     margin-bottom: 20px;
     margin-left: 225px;
@@ -114,11 +115,33 @@ button.delete-btn{
     width: 30px;
     align-items: end;
     margin-left: 20px;
-    position: absolute;  /* moves it to very right #important*/
-    right: 5px;;
+    position: absolute;  
+    right:5px /* moves it to very right #important*/
+       
 }
 
 button.delete-btn img {
     width: 30px; /* Set the image width as desired */
     align-items: flex-start;  
+}
+
+button.edit-btn{
+    background-color:#dca722;
+    cursor: pointer;
+    border: none;
+    color: antiquewhite;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 30px;
+    height: 38px;
+    align-items: center;
+    margin-left: 50px;
+    position: absolute; 
+    right: 50px;  /* moves it to very right #important*/
+    padding: 8px 30px;
+    display: inline-flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
 }
