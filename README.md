@@ -5,7 +5,8 @@
 
 The Everyday To-Do List App is a simple yet powerful tool designed to help you manage your daily tasks efficiently.
 
-Features
+Features:
+
 Add Tasks: Quickly add new tasks to your to-do list. Just type in the task and hit the "Add" button.
 
 Edit Tasks: Made a typo or need to update a task? No problem! Click the "Edit" button next to the task, make your changes, and hit "Enter."
