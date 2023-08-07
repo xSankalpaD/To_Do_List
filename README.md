@@ -1,11 +1,8 @@
 # To_Do_List
-![image](https://github.com/xSankalpaD/To_Do_List/assets/90166191/8592fdb8-784a-43f5-a210-e7a34aadb815)
-
-
-
-The Everyday To-Do List App is a simple yet powerful tool designed to help you manage your daily tasks efficiently.
 
 Link: https://xsankalpad.github.io/To_Do_List/ 
+
+The Everyday To-Do List App is a simple yet powerful tool designed to help you manage your daily tasks efficiently.
 
 Features:
 
