@@ -1,5 +1,6 @@
 const taskInput= document.getElementById("input-box");
 const taskList= document.getElementById("list");
+let deleteButton, editButton; // Declare these globally
 
 function addTask(){
     const taskText= taskInput.value;
@@ -19,32 +20,8 @@ function createTaskItem(taskText) {
     const taskItem= document.createElement("li");
     taskItem.textContent = taskText;
   
-    // Adding delete button
-    const deleteButton = document.createElement("button");
-    deleteButton.classList.add("delete-btn"); //Add the custom CSS class to the button to edit it
-    
-    // Create an image element and set the image source
-    const deleteImage = document.createElement("img");
-    deleteImage.src = "images/delete.png"; // path to image
-
-    deleteButton.appendChild(deleteImage); // Append the image to the button
-    deleteButton.addEventListener("click", function (){
-        taskItem.remove();
-   
-    }); 
-    
-    // Add "Edit" button to each task
-    const editButton = document.createElement("button");
-    editButton.classList.add("edit-btn"); //Add the custom CSS class to the button to edit it
-    editButton.textContent = "Edit";
-
-    editButton.addEventListener("click", function () {
-        const updatedText = prompt("Edit the task:", taskItem.textContent);
-        if (updatedText !== null && updatedText.trim() !== "") {
-            taskItem.textContent = updatedText.trim();
-        }
-    });
-
+    const deleteButton = createDeleteButton(); // Create delete button
+    const editButton = createEditButton();     // Create edit button
 
     taskItem.appendChild(deleteButton);
     taskItem.appendChild(editButton);
@@ -60,3 +37,45 @@ taskList.addEventListener("click", function(e){
     }
 
 });
+
+// Function to create "Delete" button
+function createDeleteButton() {
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-btn");
+
+    const deleteImage = document.createElement("img");
+    deleteImage.src = "images/delete.png";
+    deleteButton.appendChild(deleteImage);
+
+    deleteButton.addEventListener("click", function () {
+        deleteButton.parentElement.remove();
+    });
+
+    return deleteButton;
+}
+
+// Function to create "Edit" button
+function createEditButton() {
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit-btn");
+    editButton.textContent = "Edit";
+
+    editButton.addEventListener("click", function () {
+        const taskItem = editButton.parentElement;
+        const updatedText = prompt("Edit the task:", taskItem.textContent);
+        if (updatedText !== null && updatedText.trim() !== "") {
+            taskItem.textContent = updatedText.trim();
+            taskItem.appendChild(deleteButton); // Re-add delete button
+            taskItem.appendChild(editButton);   // Re-add edit button
+        }
+    });
+
+    return editButton;
+}
+
+
+
+
+
+
+
